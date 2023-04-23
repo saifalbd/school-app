@@ -47,7 +47,7 @@ class Attachment extends Model
         $model = class_basename($model);
        $type = $file->getClientMimeType();
        $ex = $file->getClientOriginalExtension();
-       $disk = 'junk';
+       $disk = 's3';
        $slug = 'school-app';
        $uid = uniqid();
        $name = $uid.'.'.$ex;
