@@ -15,6 +15,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue3_select2_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue3-select2-component */ "./node_modules/vue3-select2-component/src/Select2.vue");
 /* harmony import */ var _components_pageheader_pageaddheader_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/pageheader/pageaddheader.vue */ "./vue/components/pageheader/pageaddheader.vue");
 /* harmony import */ var _plugins_utility__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../plugins/utility */ "./vue/plugins/utility.ts");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -148,6 +150,16 @@ var columns = [{
     }
   }
 }, {
+  title: "Year",
+  dataIndex: "year",
+  sorter: {
+    compare: function compare(a, b) {
+      a = a.year;
+      b = b.year;
+      return a > b ? -1 : b > a ? 1 : 0;
+    }
+  }
+}, {
   title: "Email",
   dataIndex: "email"
 }, {
@@ -182,6 +194,7 @@ var columns = [{
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
     VueSelect: vue3_select2_component__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -191,6 +204,7 @@ var columns = [{
     var _this = this;
     var filter = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(false);
     var items = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);
+    var filteredItems = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);
     var busy = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(true);
     var fetch = function fetch() {
       return __awaiter(_this, void 0, void 0, function () {
@@ -204,6 +218,7 @@ var columns = [{
             case 1:
               data = _a.sent().data;
               items.value = data.data;
+              filteredItems.value = data.data;
               busy.value = false;
               return [3 /*break*/, 3];
             case 2:
@@ -248,11 +263,26 @@ var columns = [{
       });
     };
 
+    var onSearch = function onSearch(event) {
+      var target = event.target;
+      var val = (0,lodash__WEBPACK_IMPORTED_MODULE_4__.trim)((0,lodash__WEBPACK_IMPORTED_MODULE_4__.lowerCase)(target.value));
+      if (val) {
+        filteredItems.value = items.value.filter(function (e) {
+          var name = (0,lodash__WEBPACK_IMPORTED_MODULE_4__.lowerCase)(e.name);
+          var has = name.search(val) > -1;
+          return has;
+        });
+      } else {
+        filteredItems.value = items.value;
+      }
+    };
     return {
       busy: busy,
       filter: filter,
       columns: columns,
+      filteredItems: filteredItems,
       items: items,
+      onSearch: onSearch,
       remove: remove
     };
   },
@@ -301,10 +331,20 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   alt: "img"
 })], -1 /* HOISTED */);
 var _hoisted_9 = [_hoisted_7, _hoisted_8];
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"search-input\"><a class=\"btn btn-searchset\"><img src=\"/assets/img/icons/search-white.svg\" alt=\"img\"></a><div id=\"DataTables_Table_0_filter\" class=\"dataTables_filter\"><label><input type=\"search\" class=\"form-control form-control-sm\" placeholder=\"Search...\" aria-controls=\"DataTables_Table_0\"></label></div></div>", 1);
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"wordset\"><ul><li><a data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"pdf\"><img src=\"/assets/img/icons/pdf.svg\" alt=\"img\"></a></li><li><a data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"excel\"><img src=\"/assets/img/icons/excel.svg\" alt=\"img\"></a></li><li><a data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"print\"><img src=\"/assets/img/icons/printer.svg\" alt=\"img\"></a></li></ul></div>", 1);
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"card-body pb-0\"><div class=\"row\"><div class=\"col-lg-3 col-sm-6 col-12\"><div class=\"form-group\"><input type=\"text\" placeholder=\"Enter Category Name\"></div></div><div class=\"col-lg-3 col-sm-6 col-12\"><div class=\"form-group\"><input type=\"text\" placeholder=\"Enter Brand Description\"></div></div><div class=\"col-lg-1 col-sm-6 col-12 ms-auto\"><div class=\"form-group\"><a class=\"btn btn-filters ms-auto\"><img src=\"/assets/img/icons/search-whites.svg\" alt=\"img\"></a></div></div></div></div>", 1);
-var _hoisted_13 = [_hoisted_12];
+var _hoisted_10 = {
+  "class": "search-input"
+};
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "btn btn-searchset"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "/assets/img/icons/search-white.svg",
+  alt: "img"
+})], -1 /* HOISTED */);
+var _hoisted_12 = {
+  id: "DataTables_Table_0_filter",
+  "class": "dataTables_filter"
+};
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"wordset\"><ul><li><a data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"pdf\"><img src=\"/assets/img/icons/pdf.svg\" alt=\"img\"></a></li><li><a data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"excel\"><img src=\"/assets/img/icons/excel.svg\" alt=\"img\"></a></li><li><a data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"print\"><img src=\"/assets/img/icons/printer.svg\" alt=\"img\"></a></li></ul></div>", 1);
 var _hoisted_14 = {
   "class": "table-responsive"
 };
@@ -335,16 +375,24 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $setup.filter = !$setup.filter;
     })
-  }, _hoisted_9, 2 /* CLASS */)]), _hoisted_10]), _hoisted_11]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Filter "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "card",
-    id: "filter_inputs",
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
-      display: $setup.filter ? 'block' : 'none'
+  }, _hoisted_9, 2 /* CLASS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "search",
+    "class": "form-control form-control-sm",
+    placeholder: "Search...",
+    "aria-controls": "DataTables_Table_0",
+    onChange: _cache[1] || (_cache[1] =
+    //@ts-ignore
+    function () {
+      var args = [];
+      for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+      }
+      return $setup.onSearch && $setup.onSearch.apply($setup, args);
     })
-  }, _hoisted_13, 4 /* STYLE */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Filter "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_a_table, {
+  }, null, 32 /* HYDRATE_EVENTS */)])])])]), _hoisted_13]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Filter "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /Filter "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_a_table, {
     loading: $setup.busy,
     columns: $setup.columns,
-    "data-source": $setup.items,
+    "data-source": $setup.filteredItems,
     pagination: false
   }, {
     bodyCell: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function (_a) {

@@ -6,7 +6,7 @@
        
         <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
 
-        <title>Laravel</title>
+        <title>Alumni Association of Munshirhat High School</title>
         <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
 
         @routes

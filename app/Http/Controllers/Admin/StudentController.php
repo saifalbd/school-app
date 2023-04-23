@@ -16,7 +16,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $items = Student::query()->with('avatar')->paginate(50);
+        $items = Student::query()->with('avatar')->paginate(200);
 
         return $items;
     }

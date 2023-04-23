@@ -38,6 +38,7 @@
                         class="form-control form-control-sm"
                         placeholder="Search..."
                         aria-controls="DataTables_Table_0"
+                        @change="onSearch"
                       />
                     </label>
                   </div>
@@ -64,41 +65,13 @@
               </div>
             </div>
             <!-- /Filter -->
-            <div
-              class="card"
-              id="filter_inputs"
-              :style="{
-                display: filter ? 'block' : 'none',
-              }"
-            >
-             <div class="card-body pb-0">
-                <div class="row">
-                  <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="form-group">
-                      <input type="text" placeholder="Enter Category Name" />
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="form-group">
-                      <input type="text" placeholder="Enter Brand Description" />
-                    </div>
-                  </div>
-                  <div class="col-lg-1 col-sm-6 col-12 ms-auto">
-                    <div class="form-group">
-                      <a class="btn btn-filters ms-auto"
-                        ><img src="/assets/img/icons/search-whites.svg" alt="img"
-                      /></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
             <!-- /Filter -->
          <div class="table-responsive">
               <a-table
               :loading="busy"
                 :columns="columns"
-                :data-source="items"
+                :data-source="filteredItems"
                 :pagination="false"
                
               >
@@ -147,6 +120,17 @@ const columns = [
       },
     },
   },
+   {
+    title: "Year",
+    dataIndex: "year",
+    sorter: {
+      compare: (a, b) => {
+        a = a.year;
+        b = b.year;
+        return a > b ? -1 : b > a ? 1 : 0;
+      },
+    },
+  },
     {
     title: "Email",
     dataIndex: "email",
@@ -177,6 +161,7 @@ const columns = [
 import VueSelect from "vue3-select2-component";
 import PageAddHeader from "../../components/pageheader/pageaddheader.vue";
 import { deleteConfirm, errorAlert } from '../../plugins/utility';
+import { lowerCase, trim } from 'lodash';
 export default {
     components:{
     VueSelect,
@@ -185,12 +170,14 @@ export default {
   setup(){
     const filter = ref(false);
     const items = ref([]);
+    const filteredItems =  ref([]);
     const busy = ref(true)
     const fetch = async ()=>{
       try {
         const url = route('api.student.index');
         const {data} = await axios.get(url);
         items.value = data.data;
+        filteredItems.value = data.data;
         busy.value = false
         
       } catch (error) {
@@ -215,12 +202,31 @@ export default {
    }
 
 
+   const onSearch = (event)=>{
+    let target = event.target;
+    let val = trim(lowerCase(target.value));
+    if(val){
+      filteredItems.value = items.value.filter((e:any)=>{
+        let name = lowerCase(e.name) 
+       let has =  name.search(val)>-1;
+       return has;
+      })
+
+
+    }else{
+filteredItems.value = items.value
+    }
+    
+   }
+
+
     return {
       busy,
       filter,
       columns,
+      filteredItems,
       items,
-   
+   onSearch,
       remove
     }
     
