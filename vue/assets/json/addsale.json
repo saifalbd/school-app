@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "num": "1",
+      "img": "product7.jpg",
+      "productname": "Apple Earpods",
+      "qty": "1.00",
+      "price": "15000.00",
+      "discount": "0.00",
+      "tax": "0.00",
+      "subtotal": "1500.00"
+      
+    },
+    {
+      "id": 2,
+      "num": "2",
+      "img": "product8.jpg",
+      "productname": "iPhone 11",
+      "qty": "1.00",
+      "price": "1500.00",
+      "discount": "0.00",
+      "tax": "0.00",
+      "subtotal": "1500.00"
+     
+    },
+    {
+      "id": 3,  
+      "num": "2",
+      "img": "product1.jpg",
+      "productname": "Macbook pro",
+      "qty": "1.00",
+      "price": "1500.00",
+      "discount": "0.00",
+      "tax": "0.00",
+      "subtotal": "1500.00"
+      
+    }
+   ]

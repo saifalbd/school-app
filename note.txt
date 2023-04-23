@@ -1,0 +1,3 @@
+
+php artisan make:controller Admin/HomeController
+php artisan make:controller Admin/BannarController -r

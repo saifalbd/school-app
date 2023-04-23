@@ -1,0 +1,67 @@
+[
+  {
+    "id": "1",
+    "header": "Product",
+    "header2": "Macbook pro"
+  },
+  {
+    "id": "2",
+    "header": "Category",
+    "header2": "Computers"
+  },
+  {
+    "id": "3",
+    "header": "Sub Category",
+    "header2": "None"
+  },
+  {
+    "id": "4",
+    "header": "Brand",
+    "header2": "None"
+  },
+  {
+    "id": "5",
+    "header": "Unit",
+    "header2": "Piece"
+  },
+  {
+    "id": "6",
+    "header": "SKU",
+    "header2": "PT0001"
+  },
+  {
+    "id": "7",
+    "header": "Minimum Qty",
+    "header2": "5"
+  },
+  {
+    "id": "8",
+    "header": "Quantity",
+    "header2": "50"
+  },
+  {
+    "id": "9",
+    "header": "Tax",
+    "header2": "0.00 %"
+  },
+  {
+    "id": "10",
+    "header": "Discount Type",
+    "header2": "Percentage"
+  },
+  {
+    "id": "11",
+    "header": "Price",
+    "header2": "1500.00"
+  },
+  {
+    "id": "12",
+    "header": "Status",
+    "header2": "Active"
+  },
+  {
+    "id": "13",
+    "header": "Description",
+    "header2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+  }
+]

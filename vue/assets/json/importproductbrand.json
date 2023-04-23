@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "header": "Minimum Qty",
+    "header2": "Field optional"
+  },
+  {
+    "id": "2",
+    "header": "Quantity",
+    "header2": "Field optional"
+  },
+  {
+    "id": "3",
+    "header": "Tax",
+    "header2": "Field optional"
+  },
+  {
+    "id": "4",
+    "header": "Discount Type",
+    "header2": "Field optional"
+  },
+  {
+    "id": "5",
+    "header": "Brand",
+    "header2": "Field optional"
+  },
+  {
+    "id": "6",
+    "header": "Minimum Qty",
+    "header2": "Field optional"
+  }
+]

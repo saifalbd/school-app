@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "img": "product7.jpg",
+      "name": "Apple Earpods",
+      "price": "150",
+      "stock": "500",
+      "qty": "500",
+      "discount": "100",
+      "tax": "250",
+      "subtotal": "500"
+    },
+    {
+      "id": 2,
+      "img": "product6.jpg",
+      "name": "Macbook Pro",
+      "price": "15.00",
+      "stock": "6000.00",
+      "qty": "100.00",
+      "discount": "0.00",
+      "tax": "0.00",
+      "subtotal": "1000.00"
+    }
+    
+   ]

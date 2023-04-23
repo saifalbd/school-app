@@ -1,0 +1,45 @@
+.single-file-box{
+    display: grid;
+    grid-template-columns:auto;
+    .image-box{
+        img{
+            display: none;
+        }
+    }
+    .image-upload{
+        margin-bottom: 0;
+    }
+  
+    &.has{
+        grid-template-columns: 100px auto;
+        .image-box{
+            img{
+                display: block;
+                height: 100px;
+            }
+        }
+    }
+    &.is-invalid{
+        .image-upload{
+            border: 2px solid rgba(225, 30, 170, 0.886);
+        }
+    }
+}
+
+
+.v-select{
+    &.vs--open{
+        .vs__dropdown-toggle{
+      color: #495057;
+            background-color: #fff;
+            border-color: #FF9F43;
+            outline: 0;
+        }
+    }
+    &.is-invalid{
+        .vs__dropdown-toggle{
+            border-color: #dc3545;
+              }
+    }
+ 
+}

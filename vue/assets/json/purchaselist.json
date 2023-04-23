@@ -1,0 +1,170 @@
+[
+    {
+      "id": 1,
+      "SupplierName": "Apex Computers",
+      "Reference": "PT001",
+      "Date": "19 Nov 2022",
+      "Status": "Received",
+      "GrandTotal": "550",
+      "Paid": "120",
+      "Due": "550",
+      "PaymentStatus": "Paid"
+      
+    },
+    {
+      "id": 2,
+      "SupplierName": "Modern Automobile",
+      "Reference": "PT002",
+      "Date": "19 Nov 2022",
+      "Status": "Received",
+      "GrandTotal": "410",
+      "Paid": "410",
+      "Due": "410",
+      "PaymentStatus": "Paid"
+      
+    },
+    {
+      "id": 3,
+      "SupplierName": "AIM Infotech",
+      "Reference": "PT003",
+      "Date": "19 Nov 2022",
+      "Status": "Pending",
+      "GrandTotal": "210",
+      "Paid": "120",
+      "Due": "210",
+      "PaymentStatus": "Unpaid"
+      
+    },
+    {
+      "id": 4,
+      "SupplierName": "Best Power Tools",
+      "Reference": "PT004",
+      "Date": "19 Nov 2022",
+      "Status": "Received",
+      "GrandTotal": "210",
+      "Paid": "120",
+      "Due": "210",
+      "PaymentStatus": "Unpaid"
+      
+    },
+    {
+      "id": 5,
+      "SupplierName": "Best Power Tools",
+      "Reference": "PT005",
+      "Date": "19 Nov 2022",
+      "Status": "Pending",
+      "GrandTotal": "210",
+      "Paid": "120",
+      "Due": "210",
+      "PaymentStatus": "Unpaid"
+      
+    },
+    {
+      "id": 6,
+      "SupplierName": "Best Power Tools",
+      "Reference": "PT006",
+      "Date": "19 Nov 2022",
+      "Status": "Received",
+      "GrandTotal": "210",
+      "Paid": "120",
+      "Due": "210",
+      "PaymentStatus": "Paid"
+      
+    },
+    {
+      "id": 7,
+      "SupplierName": "Apex Computers",
+      "Reference": "PT007",
+      "Date": "19 Nov 2022",
+      "Status": "Ordered",
+      "GrandTotal": "1000",
+      "Paid": "500",
+      "Due": "1000",
+      "PaymentStatus": "Partial"
+      
+    },
+    {
+      "id": 8,
+      "SupplierName": "Apex Computers",
+      "Reference": "PT008",
+      "Date": "19 Nov 2022",
+      "Status": "Received",
+      "GrandTotal": "550",
+      "Paid": "120",
+      "Due": "550",
+      "PaymentStatus": "Paid"
+      
+    },
+    {
+      "id": 9,
+      "SupplierName": "Modern Automobile",
+      "Reference": "PT009",
+      "Date": "19 Nov 2022",
+      "Status": "Received",
+      "GrandTotal": "410",
+      "Paid": "410",
+      "Due": "410",
+      "PaymentStatus": "Paid"
+      
+    },
+    {
+      "id": 10,
+      "SupplierName": "AIM Infotech",
+      "Reference": "PT010",
+      "Date": "19 Nov 2022",
+      "Status": "Pending",
+      "GrandTotal": "210",
+      "Paid": "120",
+      "Due": "210",
+      "PaymentStatus": "Unpaid"
+      
+    },
+    {
+      "id": 11,
+      "SupplierName": "Best Power Tools",
+      "Reference": "PT011",
+      "Date": "19 Nov 2022",
+      "Status": "Received",
+      "GrandTotal": "210",
+      "Paid": "120",
+      "Due": "210",
+      "PaymentStatus": "Unpaid"
+      
+    },
+    {
+      "id": 12,
+      "SupplierName": "Best Power Tools",
+      "Reference": "PT012",
+      "Date": "19 Nov 2022",
+      "Status": "Pending",
+      "GrandTotal": "210",
+      "Paid": "120",
+      "Due": "210",
+      "PaymentStatus": "Unpaid"
+      
+    },
+    {
+      "id": 13,
+      "SupplierName": "Best Power Tools",
+      "Reference": "PT013",
+      "Date": "19 Nov 2022",
+      "Status": "Received",
+      "GrandTotal": "210",
+      "Paid": "120",
+      "Due": "210",
+      "PaymentStatus": "Paid"
+      
+    },
+    {
+      "id": 14,
+      "SupplierName": "Apex Computers",
+      "Reference": "PT014",
+      "Date": "19 Nov 2022",
+      "Status": "Ordered",
+      "GrandTotal": "1000",
+      "Paid": "500",
+      "Due": "1000",
+      "PaymentStatus": "Partial"
+      
+    }
+   ]

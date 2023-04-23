@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "img": "profile3.jpg",
+      "name": "Elwis Mathew",
+      "product": "added a new product",
+      "phone": "Redmi Pro 7 Mobile",
+      "time": "4 mins ago"
+    },
+    {
+      "id": 2,
+      "img": "profile4.jpg",
+      "name": "Elizabeth Olsen",
+      "product": "added a new product category",
+      "phone": "Desktop Computers",
+      "time": "6 mins ago"
+    },
+    {
+        "id": 3,
+        "img": "profile5.jpg",
+        "name": "William Smith",
+        "product": "added a new sales list for",
+        "phone": "January Month",
+        "time": "12 mins ago"
+    },
+    {
+        "id": 4,
+        "img": "customer4.jpg",
+        "name": "Lesley Grauer",
+        "product": "has updated invoice",
+        "phone": "#987654",
+        "time": "4 mins ago"
+      }
+   ]

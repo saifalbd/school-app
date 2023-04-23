@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "Macbook pro",
+      "sku": "PT001",
+      "qty": "100.00"
+    },
+    {
+      "id": 2,
+      "name": "Apple Earpods",
+      "sku": "PT002",
+      "qty": "1000.00"
+    },
+    {
+      "id": 3,  
+      "name": "Macbook pro",
+      "sku": "PT003",
+      "qty": "5000.00"
+    }
+   ]
