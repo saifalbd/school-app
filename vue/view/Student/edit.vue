@@ -246,9 +246,10 @@ export default defineComponent({
             f.append(key,val)
           }
         }
+        f.append('_method',"PUT");
         if(avatar.value){
           f.append('avatar',avatar.value)
-          f.append('_method',"PUT");
+          
         }
         await axios.post(url,f);
 
