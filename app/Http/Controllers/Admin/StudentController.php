@@ -121,7 +121,7 @@ class StudentController extends Controller
             "thana"=> ['required','string'],
             "address"=> ['nullable','string'],
             "note"=> ['nullable','string'],
-            'avatar'=>['required','image']
+            'avatar'=>['nullable','image']
            ]);
     
     
