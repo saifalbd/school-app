@@ -1,0 +1,181 @@
+
+@use "sass:math";
+
+.home-page{
+    .splide{
+        padding: 0;
+        position: relative;
+        .overly{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #0f2c5bd6;
+            display: none;
+        }
+    }
+    .splide__slide{
+        position: relative;
+        transition: all 1s;
+        img{
+         width: 100%;
+        max-height: 600px;
+
+        }
+        .info-box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+          
+            overflow: hidden;
+            .container{
+                position: relative;
+                top: 150%;
+                transition: all 1s;
+                transform: translateY(-50%);
+                .slider-text{
+                    color: wheat;
+                    h1{
+                        color: #ffffff;
+                        font-size: 50px;
+                        font-weight: 900;
+                        line-height: 60px;
+                        margin-bottom: 21px;
+                        text-transform: capitalize;
+                    }
+                    .slider-info{
+                        margin:30px 0;
+                    }
+                    .button{
+                        border: 2px solid goldenrod;
+                        background-color: #ffe08a;
+                    }
+                }
+            }
+        }
+        &.is-active{
+            .info-box{
+                .container{
+                    top: 50%;
+                } 
+            } 
+        }
+    }
+    
+    .vistion-box{
+        width: 100%;
+        z-index: 2;
+        .vision-box-inner{
+            padding: 10px;
+            .box{
+                min-height: 300px;
+                .campus-box{
+                  
+                    background-color: gold;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                    min-height: 250px;
+                    background-color: #cccccc;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    .inner{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        background-color: #ffe08a9e;
+                        color: #0f0b02;
+                    }
+                }
+                .tab-wrapper{
+                    padding-left: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .tabs{
+                        display: grid;
+                        grid-template-columns: repeat(3,auto);
+                        grid-gap: 10px;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        li{
+                            cursor: pointer;
+                            color: #4b024f;
+                            &.active{
+                                color:#f14646;
+                            }
+                        }
+                    }
+                    .tab-contains{
+                        overflow: hidden;
+                        li{
+                            overflow: hidden;
+                            
+                            &:not(.active){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media (min-width: 992px) {
+            $height:320px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: math.div($height , 2);
+            .vision-box-inner{
+                height: $height;
+                transform: translateY(-50%);
+                background-color: #f2f2f2;
+                .box{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+
+    section{
+      
+        .section-title{
+            display: flex;
+            justify-content: flex-start;
+            .title-box{
+                display: flex;
+                flex-direction: column;
+             
+                justify-content:center;
+                align-items: center;
+                span{
+                    text-align: center;
+                    &:first-child{
+                        font-size: 2rem;
+                        font-weight: 500;
+                        line-height: 2rem;
+                    }
+                    svg{
+                        height: 10px;
+                        width: 10px;
+                    }
+                }
+            }
+           
+         
+        }
+    }
+
+    .news-blogs{
+
+    }
+}
+

@@ -189,6 +189,7 @@ export default defineComponent({
       district: null,
       thana: null,
       address: null,
+       address_perm:null,
       note: null,
     });
   
@@ -225,6 +226,7 @@ export default defineComponent({
       form.district = o.district;
       form.thana = o.thana;
       form.address = o.address;
+      form.address_perm = o.address_perm;
       form.note = o.note;
       image.value = o.avatar;
 

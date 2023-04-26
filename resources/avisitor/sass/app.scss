@@ -1,0 +1,123 @@
+@import '../../../node_modules/@splidejs/splide/dist/css/splide-core.min.css';
+@import '../../../node_modules/@splidejs/splide/dist/css/splide.min.css';
+@import '../../../node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
+@import './member.scss';
+@import './homePage.scss';
+@import './contactPage.scss';
+
+header{
+
+    nav{
+     
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid black;
+        min-height: 40px;
+     
+        width: 100%;
+        top: 0;
+        z-index: 3;
+        .logo-box{
+            img{
+                max-height: 40px;
+            }
+        }
+        ul.menus{
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            grid-column-gap: 10px;
+            // margin-right: 50px;
+           a{
+         
+            font-weight: bold;
+            font-size: 1rem;
+           }
+        }
+        @media (min-width: 992px) {
+         
+            .logo-box{
+                padding-left: 50px;
+                 img{
+                     max-height: 60px;
+                 }
+             }
+             ul.menus{
+                grid-column-gap: 15px;
+                margin-right: 50px;
+             }
+
+             &.small{
+           
+                .logo-box{
+                    padding-left: 50px;
+                     img{
+                         max-height: 40px;
+                     }
+                 }
+            }
+        }
+    }
+}
+
+main{
+
+
+}
+.page-footer{
+    background-color: black;
+    min-height: 200px;
+    padding: 50px 0;
+   .container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    .title{
+        color: goldenrod;
+        font-size: 1.5rem;
+    }
+    .socials {
+        margin-bottom: 50px;
+        a{
+          margin:0 5px;
+         color: gold;
+          padding-top: 5px;
+          .icon{
+              height: 30px;
+              width: 30px;
+              font-size: 25px;
+          }
+        }
+    }
+    .company-info{
+        color: goldenrod;
+        max-width: 350px;
+        .title{
+            border-bottom: 2px solid gold;
+        }
+    }
+   }
+}
+
+.home-page{
+    nav{
+        background-color: rgb(0 41 67 / 38%);
+        position: fixed;
+        ul.menus{
+            a{
+                color: #ffe08a;
+            }
+        }
+    }
+}
+
+.add-me-file-box{
+    display: flex;
+    justify-content: center;
+    .image-box{
+        width: 120px;
+        height: 120px;
+        background-color: #ffe08a;
+    }
+}

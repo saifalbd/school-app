@@ -27,6 +27,7 @@ Route::middleware('auth:sanctum')->group( function () {
  
 
    Route::apiResource('/students',StudentController::class)->names('student');
+   Route::get('/student-status/{student}',[StudentController::class,'activeToggle'])->name('activeToggle');
   // Route::post('/students/{student}',[StudentController::class,'update'])->name('student.update');
    Route::apiResource('/bannars',BannarController::class)->names('bannar');
 

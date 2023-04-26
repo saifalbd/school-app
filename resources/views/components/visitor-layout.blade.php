@@ -38,7 +38,7 @@
             <ul class="menus">
                 <li class="is-hidden-mobile"><a href="{{route('vistorHome')}}">Home</a></li>
                 <li><a href="{{route('members')}}">Members</a></li>
-                <li><a href="{{route('contacts')}}">About Us</a></li>
+                <li><a href="{{route('addMe')}}">Add Me</a></li>
                 <li><a href="{{route('contacts')}}">Contact Us</a></li>
             </ul>
         </nav>

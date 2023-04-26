@@ -118,6 +118,14 @@
               ></input-vue>
             </div>
 
+   <div class="col-12">
+              <input-vue
+                name="address"
+                label="Permanent Address"
+                v-model="form.address_perm"
+                :error="errors.address_perm"
+              ></input-vue>
+            </div>
             <div class="col-lg-12">
               <div class="form-group">
                 <label>Description</label>
@@ -170,21 +178,21 @@ export default defineComponent({
       let text = id;
       return { id, text };
     });
-    // const form = reactive({
-    //   year: null,
-    //   nid: null,
-    //   name: null,
-    //   email: null,
-    //   phone: null,
-    //   profession: null,
-    //   organization: null,
-    //   designation: null,
-    //   district: null,
-    //   thana: null,
-    //   address: null,
-    //   note: null,
-    // });
-    const form = reactive({"year":2022,"nid":"55852","name":"saidul company","email":null,"phone":"01312288426","profession":"Seo","organization":"redcom demo","designation":"designation","district":"dhaka","thana":"dhaka","address":"mohamadi hoising","note":"adsadasd"})
+    const form = reactive({
+      year: null,
+      nid: null,
+      name: null,
+      email: null,
+      phone: null,
+      profession: null,
+      organization: null,
+      designation: null,
+      district: null,
+      thana: null,
+      address: null,
+      address_perm:null,
+      note: null,
+    });
 
     const avatar = ref(null);
 

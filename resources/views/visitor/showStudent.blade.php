@@ -4,7 +4,7 @@
     <div class="is-flex is-justify-content-start">
     <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
-    <li><a href="#">Home</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="{{route('members')}}">Members</a></li>
   </ul>
 </nav>
@@ -68,6 +68,14 @@
                     <li>
                         <div><b>Thana:</b></div>
                         <div>{{$student->thana}}</div>
+                    </li>
+                    <li>
+                        <div><b>Present address:</b></div>
+                        <div>{{$student->address}}</div>
+                    </li>
+                    <li>
+                        <div><b>Permanent Address:</b></div>
+                        <div>{{$student->address_perm}}</div>
                     </li>
                 </ul>
             </div>

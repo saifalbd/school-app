@@ -31,9 +31,13 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+
+
+        
+     
         $request->validate([
             "year"=> ['required','numeric'],
-            "nid"=> ['required','numeric'],
+            "nid"=> ['nullable','numeric'],
             "name"=> ['required','string'],
             "email"=> ['nullable','email'],
             "phone"=> ['nullable','string'],
@@ -43,7 +47,9 @@ class StudentController extends Controller
             "district"=> ['required','string'],
             "thana"=> ['required','string'],
             "address"=> ['nullable','string'],
+            'address_perm'=> ['nullable','string'],
             "note"=> ['nullable','string'],
+            'status'=>['nullable','in:0,1'],
             'avatar'=>['required','image']
            ]);
     
@@ -54,8 +60,9 @@ class StudentController extends Controller
               $avarar = Attachment::add($attach,Student::class);
               $avatar_id = $avarar->id;
            }
+
+           $status = $request->get('status',1);
           
-    
           
            $list = $request->only(["year",
            "nid",
@@ -68,11 +75,18 @@ class StudentController extends Controller
            "district",
            "thana",
            "address",
+           'address_perm',
            "note"]);
     
-           $list = array_merge($list,compact('avatar_id'));
+           $list = array_merge($list,compact('avatar_id','status'));
     
-           Student::create($list);
+        $st =Student::create($list);
+
+           if($request->has('redirect')){
+            return redirect()->route('addMe',['succcess'=>'Successfully Submited Request Wait SomeTime We are Approved Your Request']);
+           }else{
+            return $st;
+           }
     }
 
     /**
@@ -98,6 +112,15 @@ class StudentController extends Controller
         //
     }
 
+
+    public function activeToggle(Student $student){
+        
+        $status = !$student->status;
+
+        $student->update(compact('status'));
+        
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -107,6 +130,8 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
+
+        return $request->toArray();
    
         $request->validate([
             "year"=> ['required','numeric'],
@@ -121,7 +146,8 @@ class StudentController extends Controller
             "thana"=> ['required','string'],
             "address"=> ['nullable','string'],
             "note"=> ['nullable','string'],
-            'avatar'=>['nullable','image']
+            'avatar'=>['nullable','image'],
+            'address_perm'=> ['nullable','string'],
            ]);
     
     
@@ -146,6 +172,7 @@ class StudentController extends Controller
            "district",
            "thana",
            "address",
+           'address_perm',
            "note"]);
     
            $list = array_merge($list,compact('avatar_id'));

@@ -31,7 +31,7 @@
 
 <body class="{{$page}}">
     <header>
-        <nav class="small">
+        <nav>
             <div class="logo-box">
                 <img src="{{asset('images/logo.png')}}" alt="" srcset="">
             </div>

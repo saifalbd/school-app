@@ -97,14 +97,14 @@
                             <img src="{{$student->avatar->url}}" alt="" srcset="">
                         </div>
                         <div class="info-box">
-                            <div class="title">{{$student->name}}</div>
-                            <div class="info">Profession: {{$student->profession}}</div>
-                            <div class="info">Organization: {{$student->organization}}</div>
-                            <!-- <div class="info">Address: {{$student->address}}</div> -->
+                            <!-- <div class="title">{{$student->name}}</div>
+                            <div class="info">@ {{$student->profession}}</div> -->
+                            <p class="title is-5"><a href="{{route('showStudent',['id'=>$student->id])}}">{{$student->name}}</a></p>
+        <p class="subtitle is-6">@<?= $student->profession ?> at <?= $student->organization ?></p>
+               
+      
                         </div>
-                        <div class="footer">
-                            <a class="s-btn" href="{{route('showStudent',['id'=>$student->id])}}">Show</a>
-                        </div>
+                       
                     </div>
                 </div>
                 @endforeach

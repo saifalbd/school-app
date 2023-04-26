@@ -16,7 +16,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $items = Student::query()->limit(100)->get()->sortBy('year')->groupBy('year');
+        $items = Student::query()->where('status',1)->limit(100)->get()->sortBy('year')->groupBy('year');
         //return $items;
         $bannars = Banner::all();
        // return $bannars;
@@ -45,7 +45,7 @@ class HomeController extends Controller
     }
 
     public function members(){
-        $items = Student::all()->sortBy('year')->groupBy('year');
+        $items = Student::query()->where('status',1)->get()->sortBy('year')->groupBy('year');
         return view('visitor.members',compact('items'));
     }
 

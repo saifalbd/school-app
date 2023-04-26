@@ -24,8 +24,10 @@ class Student extends Model
         "district",
         "thana",
         "address",
+        'address_perm',
         "note",
-        'avatar_id'
+        'avatar_id',
+        'status'
     ];
 
 

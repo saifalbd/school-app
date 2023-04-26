@@ -1,0 +1,72 @@
+.contact-page{
+    .page-title-area{
+        min-height: 300px;
+        position: relative;
+        background-color: #cccccc;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        .area-box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: wheat;
+            background-color: #8a2be24a;
+            h1{
+                font-size: 2.5rem;
+                text-transform: uppercase;
+            }
+            p{
+                max-width: 400px;
+            }
+        }
+    }
+
+    .map-section{
+        width: 100%;
+        margin-top: 50px;
+        position: relative;
+        .mapouter{
+            width: 100%;
+       
+            display: flex;
+            justify-content: center;
+            .gmap_canvas {overflow:hidden;background:none!important;
+
+                width: calc(100% - 50px);
+                aspect-ratio: 3;
+                iframe{
+                    width: 100%;
+                    aspect-ratio: 3;
+                }
+            }
+        }
+
+        .map-content{
+            
+            background: #ffffff;
+            box-shadow: 0 0 8px 0 rgb(0 0 0 / 17%);
+            left: 25px;
+            padding: 40px 55px 40px 40px;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
+      
+    }
+    .form-section{
+        h1{
+            font-size: 1.5rem;
+        }
+        margin: 50px 0;
+    }
+
+}

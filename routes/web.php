@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\StudentController;
 use App\Http\Resources\PurchaseEditResource;
 use App\Models\Order;
 use App\Models\Sale;
@@ -22,6 +23,8 @@ Route::get('/',[VisitorHomeController::class,'index'])->name('vistorHome');
 Route::get('/students/{id}',[VisitorHomeController::class,'show'])->name('showStudent');
 Route::get('/members',[VisitorHomeController::class,'members'])->name('members');
 Route::view('/contacts','visitor.contact')->name('contacts');
+Route::view('/add-me','visitor.addPage')->name('addMe');
+Route::post('/add-me',[StudentController::class,'store'])->name('addMe.store');
 
 Route::get('check',function(){
     $sale = new SaleReport;
