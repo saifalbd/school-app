@@ -131,7 +131,7 @@ class StudentController extends Controller
     public function update(Request $request, Student $student)
     {
 
-        return $request->toArray();
+       
    
         $request->validate([
             "year"=> ['required','numeric'],
